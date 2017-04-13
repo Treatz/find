@@ -15,35 +15,24 @@ class CmdFind(MuxCommand):
             for arg in self.caller.location.exits:
                 for matches in arg.destination.contents:
                     if self.args == matches.key:
-                        self.msg("You sense it is %s." % arg)
+                        self.msg("(1)You sense it is %s." % arg)
                         return
                     else:
                         for arg2 in matches.location.exits:
                            for matches2 in arg2.destination.contents:
                                if self.args == matches2.key:
-                                   self.msg("You sense it is %s." % arg)	                  
+                                   self.msg("(2)You sense it is %s." % arg)	                  
                                    return
                                else:
                                    for arg3 in matches2.location.exits:
                                        for matches3 in arg3.destination.contents:
                                            if self.args == matches3.key:
-                                               self.msg("You sense it is %s." % arg)	                  
+                                               self.msg("(3)You sense it is %s." % arg)	                  
                                                return
-                                          else:
-                                              for arg4 in matches3.location.exits:
-                                                  for matches4 in arg4.destination.contents:
-                                                      if self.args == matches4.key:
-                                                          self.msg("You sense it is %s." % arg)	                  
-                                                          return
-                                                      else:
-                                                          for arg5 in matches4.location.exits:
-                                                              for matches5 in arg5.destination.contents:
-                                                                  if self.args == matches5.key:
-                                                                      self.msg("You sense it is %s." % arg)	                  
-                                                                      return
-                                                                  else:
-                                                                      for arg5 in matches4.location.exits:
-                                                                          for matches5 in arg5.destination.contents:
-                                                                              if self.args == matches5.key:
-                                                                                  self.msg("You sense it is %s." % arg)	                  
-                                                                                  return
+                                           else:
+                                               for arg4 in matches3.location.exits:
+                                                   for matches4 in arg4.destination.contents:
+                                                       if self.args == matches4.key:
+                                                           self.msg("(4)You sense it is %s." % arg)	                  
+                                                           return
+                                                   
