@@ -24,9 +24,26 @@ class CmdFind(MuxCommand):
                                    self.msg("You sense it is %s." % arg)	                  
                                    return
                                else:
-                               	self.msg("test")
                                    for arg3 in matches2.location.exits:
                                        for matches3 in arg3.destination.contents:
                                            if self.args == matches3.key:
                                                self.msg("You sense it is %s." % arg)	                  
                                                return
+                                          else:
+                                              for arg4 in matches3.location.exits:
+                                                  for matches4 in arg4.destination.contents:
+                                                      if self.args == matches4.key:
+                                                          self.msg("You sense it is %s." % arg)	                  
+                                                          return
+                                                      else:
+                                                          for arg5 in matches4.location.exits:
+                                                              for matches5 in arg5.destination.contents:
+                                                                  if self.args == matches5.key:
+                                                                      self.msg("You sense it is %s." % arg)	                  
+                                                                      return
+                                                                  else:
+                                                                      for arg5 in matches4.location.exits:
+                                                                          for matches5 in arg5.destination.contents:
+                                                                              if self.args == matches5.key:
+                                                                                  self.msg("You sense it is %s." % arg)	                  
+                                                                                  return
