@@ -14,18 +14,19 @@ class CmdFind(MuxCommand):
         if skip:
             for arg in self.caller.location.exits:
                 for matches in arg.destination.contents:
-			if self.args == matches.key:
-				self.msg("You sense it is %s." % arg)
-				return
-			else:
-				for arg2 in matches.location.exits:
-					for matches2 in arg2.destination.contents:
-						if self.args == matches2.key:
-							self.msg("You sense it is %s." % arg)	                  
-							return
-                		else:
-							for arg3 in matches.location.exits:
-								for matches3 in arg3.destination.contents:
-									if self.args == matches3.key:
-										self.msg("You sense it is %s." % arg)	                  
-										return
+                    if self.args == matches.key:
+                        self.msg("You sense it is %s." % arg)
+                        return
+                    else:
+                        for arg2 in matches.location.exits:
+                           for matches2 in arg2.destination.contents:
+                               if self.args == matches2.key:
+                                   self.msg("You sense it is %s." % arg)	                  
+                                   return
+                               else:
+                               	self.msg("test")
+                                   for arg3 in matches2.location.exits:
+                                       for matches3 in arg3.destination.contents:
+                                           if self.args == matches3.key:
+                                               self.msg("You sense it is %s." % arg)	                  
+                                               return
